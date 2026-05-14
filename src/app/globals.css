@@ -2,16 +2,19 @@
 @import 'tailwindcss';
 
 :root {
-  /* Brand tokens */
-  --ffc-primary: #2a6682;
-  --ffc-accent: #f58629;
-  --ffc-yellow: #f5c045;
-  --ffc-black: #000000;
-  --ffc-white: #ffffff;
+  /* Brand tokens - New Jersey Support Israel */
+  --nj-primary: #0038b8; /* Israeli flag blue */
+  --nj-primary-dark: #002a8c;
+  --nj-ink: #0a1f44; /* deep navy text */
+  --nj-ink-soft: #27315a;
+  --nj-paper: #ffffff;
+  --nj-cream: #f7f8fc;
+  --nj-accent: #d4af37; /* warm gold - heritage accent */
+  --nj-line: #e3e7f3;
 
   /* Layout */
-  --ffc-container: 1248px;
-  --ffc-radius-xl: 20px;
+  --nj-container: 1200px;
+  --nj-radius-xl: 20px;
 }
 
 html,
@@ -21,14 +24,17 @@ body {
 
 @theme inline {
   /* Tailwind design tokens mapped to brand variables */
-  --color-primary: var(--ffc-primary);
-  --color-accent: var(--ffc-accent);
-  --color-yellow: var(--ffc-yellow);
-  --color-ink: var(--ffc-black);
-  --color-paper: var(--ffc-white);
+  --color-primary: var(--nj-primary);
+  --color-primary-dark: var(--nj-primary-dark);
+  --color-accent: var(--nj-accent);
+  --color-ink: var(--nj-ink);
+  --color-ink-soft: var(--nj-ink-soft);
+  --color-paper: var(--nj-paper);
+  --color-cream: var(--nj-cream);
+  --color-line: var(--nj-line);
 
-  --radius-xl: var(--ffc-radius-xl);
-  --container: var(--ffc-container);
+  --radius-xl: var(--nj-radius-xl);
+  --container: var(--nj-container);
 
   /* Fonts (provided via next/font and CSS variables on <body>) */
   --font-serif-display: var(--font-faustina);
@@ -37,15 +43,19 @@ body {
 }
 
 body {
-  font-family: var(--font-faustina), serif !important;
+  font-family: var(--font-open-sans), sans-serif !important;
   background: var(--color-paper);
   color: var(--color-ink);
 }
 #header {
   font-family: var(--font-open-sans), sans-serif !important;
 }
+.font-sans-ui,
 #aria-font {
   font-family: var(--font-open-sans), sans-serif !important;
+}
+.font-display {
+  font-family: var(--font-faustina), serif !important;
 }
 #lato-font {
   font-family: var(--font-lato), sans-serif !important;

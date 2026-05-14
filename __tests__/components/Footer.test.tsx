@@ -13,26 +13,25 @@ describe('Footer component', () => {
     expect(footer).toBeInTheDocument()
   })
 
-  it('should display Endorsements section', () => {
+  it('should display the About section', () => {
     render(<Footer />)
-    expect(screen.getByText('Endorsements')).toBeInTheDocument()
+    expect(screen.getByText('About')).toBeInTheDocument()
   })
 
-  it('should display Quick Links section', () => {
+  it('should display the Get Involved section', () => {
     render(<Footer />)
-    expect(screen.getByText('Quick Links')).toBeInTheDocument()
+    expect(screen.getByText('Get Involved')).toBeInTheDocument()
   })
 
-  it('should display Contact Us section with contact information', () => {
+  it('should display the Contact section', () => {
     render(<Footer />)
-    expect(screen.getByText('Contact Us')).toBeInTheDocument()
+    const headings = screen.getAllByRole('heading', { name: 'Contact' })
+    expect(headings.length).toBeGreaterThan(0)
   })
 
-  it('should have social media links', () => {
+  it('should display the EIN', () => {
     render(<Footer />)
-    // Check for social media links by their aria-labels or visible text
-    const links = screen.getAllByRole('link')
-    expect(links.length).toBeGreaterThan(0)
+    expect(screen.getByText(/47-1257878/)).toBeInTheDocument()
   })
 
   it('should display the current year in copyright', () => {
@@ -41,18 +40,17 @@ describe('Footer component', () => {
     expect(screen.getByText(new RegExp(currentYear.toString()))).toBeInTheDocument()
   })
 
-  it('should have GuideStar profile link', () => {
-    render(<Footer />)
-    const guidestarLink = screen.getByText(/GuideStar Profile/i)
-    expect(guidestarLink).toBeInTheDocument()
-  })
-
   it('should have email contact link', () => {
     render(<Footer />)
-    // Look for email link
     const links = screen.getAllByRole('link')
     const emailLink = links.find((link) => link.getAttribute('href')?.includes('mailto:'))
     expect(emailLink).toBeDefined()
+  })
+
+  it('should have social media links', () => {
+    render(<Footer />)
+    const links = screen.getAllByRole('link')
+    expect(links.length).toBeGreaterThan(0)
   })
 
   it('should not have accessibility violations', async () => {
