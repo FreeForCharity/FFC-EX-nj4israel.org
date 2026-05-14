@@ -1,82 +1,75 @@
 import React from 'react'
-import Image from 'next/image'
+import Link from 'next/link'
 
-const CharityHeroBackground = () => {
+const Hero = () => {
   return (
-    <div id="hero" className="relative w-full pb-[100px] overflow-hidden">
-      {/* 1. Base Blue Layer */}
-      <div className="absolute inset-0 bg-[#2E6F8E]" />
-      {/* 2. ULTRA-THIN White Diagonal Strip - HALF HEIGHT */}
-      <div
-        className="absolute inset-0 bg-white"
-        style={{
-          clipPath: 'polygon(0% 108%, 100% 32%, 100% 35%, 0% 111%)',
-        }}
-      />
+    <section
+      id="hero"
+      className="relative w-full overflow-hidden pt-[120px] pb-[88px] md:pt-[160px] md:pb-[120px]"
+      aria-labelledby="hero-heading"
+    >
+      {/* Layered blue background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0038B8] via-[#003F9F] to-[#0A1F44]" />
+      {/* Star of David watermark */}
+      <svg
+        aria-hidden="true"
+        className="absolute right-[-80px] top-[40px] opacity-[0.08] hidden md:block"
+        width="520"
+        height="520"
+        viewBox="0 0 64 64"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g fill="none" stroke="#ffffff" strokeWidth="2" strokeLinejoin="round">
+          <polygon points="32,4 60,52 4,52" />
+          <polygon points="32,60 4,12 60,12" />
+        </g>
+      </svg>
+      {/* Soft white wave at bottom */}
+      <svg
+        aria-hidden="true"
+        className="absolute bottom-[-1px] left-0 right-0 w-full"
+        viewBox="0 0 1440 80"
+        preserveAspectRatio="none"
+        height="60"
+      >
+        <path fill="#ffffff" d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" />
+      </svg>
 
-      {/* 3. Orange Bottom-Right Section - Starts exactly where white ends */}
-      <div
-        className="absolute inset-0 bg-[#F57C20]"
-        style={{
-          clipPath: 'polygon(0% 111%, 100% 35%, 100% 100%, 0% 100%)',
-        }}
-      />
-
-      <div className="hero-container flex flex-col lg:flex-row gap-[40px] lg:gap-[0px] items-center justify-between relative z-10 text-white pt-[130px] w-[90%] mx-auto max-w-[1280px] lg:px-[20px]">
-        <div className="w-full lg:w-[565px]">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[820px]">
+          <span className="inline-block mb-5 px-3 py-1 rounded-full bg-white/15 text-white text-[12px] font-semibold uppercase tracking-[0.18em]">
+            Humanitarian Relief · Since 2014
+          </span>
           <h1
-            className="text-[50px] lg:text-[60px] font-[500] text-[#FFFFFF] leading-[120%] mb-[20px]"
-            id="faustina-font"
+            id="hero-heading"
+            className="font-display text-white text-[40px] md:text-[56px] lg:text-[64px] leading-[1.05] font-semibold tracking-tight mb-6"
           >
-            Welcome to <br /> Free For Charity
+            Standing with the families of Israel&apos;s wounded and bereaved.
           </h1>
-          <p
-            className="text-[24px] font-[400] leading-[120%] text-[#FFFFFF] mb-[20px]"
-            id="lato-font"
-          >
-            Connecting Students, Professionals, & Businesses with Charities in Need
+          <p className="text-white/90 text-[18px] md:text-[21px] leading-relaxed max-w-[680px] mb-8">
+            New Jersey Support Israel is a 501(c)(3) humanitarian organization providing direct
+            financial aid and moral support to families of terror victims and wounded IDF soldiers
+            in Israel. <span className="font-semibold text-white">100% of every donation</span>{' '}
+            reaches the families we serve.
           </p>
-          <a
-            href="#volunteer"
-            className="top-[378px] w-[300px] lg:w-[351px] h-[54px] opacity-100 rounded-[27px] px-[32px] py-[18px] flex items-center justify-center gap-[10px] bg-[#FFFFFF] text-[#113563] text-[20px] font-[400] leading-[100%] mb-[10px] whitespace-nowrap"
-            id="lato-font"
-          >
-            Volunteer
-          </a>
-          <div className="flex gap-[5px]">
-            <a
-              href="#donate"
-              className="top-[442px] w-[130px] lg:w-[173px] h-[54px] opacity-100 rounded-[27px] px-[32px] py-[18px] flex items-center justify-center gap-[10px] bg-[#FFFFFF] text-[#113563] text-[20px] font-[400] leading-[100%] whitespace-nowrap"
-              id="lato-font"
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/donate"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white text-[#0038B8] text-[16px] font-semibold hover:bg-[#FFE9A8] hover:text-[#0A1F44] transition-colors shadow-lg"
             >
-              Donate
-            </a>
-            <a
-              href="#programs"
-              className="top-[442px] w-[173px] h-[54px] opacity-100 rounded-[27px] px-[32px] py-[18px] flex items-center justify-center gap-[10px] bg-[#FFFFFF] text-[#113563] text-[20px] font-[400] leading-[100%] whitespace-nowrap"
-              id="lato-font"
+              Make a Donation
+            </Link>
+            <Link
+              href="/about"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-full border-2 border-white/70 text-white text-[16px] font-semibold hover:bg-white/10 transition-colors"
             >
-              Our Programs
-            </a>
-          </div>
-        </div>
-
-        {/* Fixed right side image section */}
-        <div className="relative w-full max-w-[445px] aspect-square bg-white rounded-full p-12 flex items-center justify-center">
-          <div className="relative w-full h-full">
-            <Image
-              src="/Images/figma-hero-img.webp"
-              alt="Hero image"
-              fill
-              className="object-contain"
-              priority
-              sizes="(max-width: 1024px) 100vw, 445px"
-            />
+              Learn About Our Work
+            </Link>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
-export default CharityHeroBackground
+export default Hero

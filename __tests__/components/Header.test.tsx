@@ -30,37 +30,26 @@ describe('Header component', () => {
     expect(screen.getByRole('banner')).toBeInTheDocument()
   })
 
-  it('should display the Free For Charity logo', () => {
+  it('should display the New Jersey Support Israel brand', () => {
     render(<Header />)
-    // Check for logo image with alt text
-    expect(screen.getByAltText('Free For Charity')).toBeInTheDocument()
+    expect(screen.getByLabelText(/New Jersey Support Israel home/i)).toBeInTheDocument()
   })
 
-  it('should display Home navigation link', () => {
+  it('should display About Us navigation link', () => {
     render(<Header />)
-    // Home link should always be present in navigation
-    expect(screen.getByText('Home')).toBeInTheDocument()
+    expect(screen.getAllByText(/About Us/i).length).toBeGreaterThan(0)
   })
 
-  it('should have navigation links', () => {
+  it('should display Donate call-to-action', () => {
     render(<Header />)
-    // Check that navigation has at least some links
-    const links = screen.getAllByRole('link')
-    expect(links.length).toBeGreaterThan(0)
+    const donates = screen.getAllByRole('link', { name: /donate/i })
+    expect(donates.length).toBeGreaterThan(0)
   })
 
   it('should have a mobile menu button', () => {
     render(<Header />)
-    // Look for the menu icon button
     const buttons = screen.getAllByRole('button')
     expect(buttons.length).toBeGreaterThan(0)
-  })
-
-  it('should have search functionality button', () => {
-    render(<Header />)
-    const buttons = screen.getAllByRole('button')
-    // Should have at least menu and search buttons
-    expect(buttons.length).toBeGreaterThanOrEqual(2)
   })
 
   it('should not have accessibility violations', async () => {
