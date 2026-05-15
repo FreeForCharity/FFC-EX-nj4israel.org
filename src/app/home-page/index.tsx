@@ -9,7 +9,7 @@ import ContactStrip from '@/components/home-page/ContactStrip'
 
 const HomePage = () => {
   return (
-    <main>
+    <main id="main">
       <Hero />
       <Mission />
       <Impact />
