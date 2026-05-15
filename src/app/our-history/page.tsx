@@ -48,7 +48,7 @@ export default function OurHistoryPage() {
         title="From a single school bus to two decades of humanitarian aid."
         subtitle="Our history is one of small, persistent acts of solidarity — and the families on both sides of the ocean who made it possible."
       />
-      <section className="max-w-[820px] mx-auto px-6 py-14 md:py-20">
+      <section className="max-w-3xl mx-auto px-6 py-14 md:py-20">
         <ol className="relative border-l-2 border-[#E3E7F3] pl-8 space-y-10">
           {milestones.map((m) => (
             <li key={m.year + m.title} className="relative">
