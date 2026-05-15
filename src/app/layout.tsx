@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import Header from './../components/header'
 import Footer from './../components/footer'
@@ -81,6 +81,11 @@ export const metadata: Metadata = {
   manifest: `${basePath}/site.webmanifest`,
 }
 
+
+export const viewport: Viewport = {
+  themeColor: '#0038b8',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -110,6 +115,12 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <GoogleTagManagerNoScript />
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-black focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
         <Header />
         {children}
         <Footer />
