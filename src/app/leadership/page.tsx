@@ -25,20 +25,30 @@ const board = [
 ]
 
 function PersonCard({ name, role }: { name: string; role: string }) {
+  const initials = name
+    .split(' ')
+    .map((n) => n[0])
+    .slice(0, 2)
+    .join('')
+
   return (
-    <div className="rounded-2xl border border-[#E3E7F3] bg-white p-6 hover:shadow-md transition-all">
-      <div
-        className="w-14 h-14 rounded-full bg-[#0038B8] text-white flex items-center justify-center font-display text-[22px] font-semibold mb-4"
-        aria-hidden="true"
-      >
-        {name
-          .split(' ')
-          .map((n) => n[0])
-          .slice(0, 2)
-          .join('')}
+    <div className="rounded-2xl border border-[#E3E7F3] bg-white p-6 hover:shadow-md hover:border-[#0038B8]/30 transition-all flex flex-col gap-4">
+      <div className="flex items-center gap-4">
+        <div
+          className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0038B8] via-[#003F9F] to-[#0A1F44] flex items-center justify-center font-display text-[24px] font-bold text-white flex-shrink-0 shadow-sm"
+          aria-hidden="true"
+        >
+          {initials}
+        </div>
+        <div>
+          <h3 className="font-display text-[19px] font-semibold text-[#0A1F44] leading-tight">
+            {name}
+          </h3>
+          <span className="inline-block mt-1.5 px-2.5 py-0.5 rounded-full bg-[#EEF2FF] text-[#0038B8] text-[12px] font-semibold tracking-wide">
+            {role}
+          </span>
+        </div>
       </div>
-      <h3 className="font-display text-[20px] font-semibold text-[#0A1F44] mb-1">{name}</h3>
-      <p className="text-[14px] text-[#27315A]">{role}</p>
     </div>
   )
 }
