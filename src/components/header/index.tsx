@@ -83,7 +83,7 @@ const Header: React.FC = () => {
                 >
                   <Link
                     href={item.path}
-                    className="px-4 py-2 text-[15px] font-medium text-[#0A1F44] hover:text-[#0038B8] transition-colors flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0038B8] rounded"
+                    className="px-4 py-2 text-[15px] font-medium text-[#0A1F44] hover:text-[#0038B8] transition-colors flex items-center gap-1"
                   >
                     {item.label}
                     {item.children && <FiChevronDown className="h-3 w-3" aria-hidden="true" />}
@@ -94,7 +94,7 @@ const Header: React.FC = () => {
                         <Link
                           key={c.label}
                           href={c.path}
-                          className="block px-4 py-2 text-[14px] text-[#0A1F44] hover:bg-[#F3F6FF] hover:text-[#0038B8] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0038B8]"
+                          className="block px-4 py-2 text-[14px] text-[#0A1F44] hover:bg-[#F3F6FF] hover:text-[#0038B8] transition-colors"
                         >
                           {c.label}
                         </Link>
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
               ))}
               <Link
                 href="/donate"
-                className="ml-2 inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#0038B8] text-white text-[15px] font-semibold hover:bg-[#002a8c] transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0038B8]"
+                className="ml-2 inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#0038B8] text-white text-[15px] font-semibold hover:bg-[#002a8c] transition-colors shadow-sm"
               >
                 Donate
               </Link>
@@ -115,7 +115,7 @@ const Header: React.FC = () => {
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-[#0A1F44] hover:text-[#0038B8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0038B8] rounded"
+              className="lg:hidden p-2 text-[#0A1F44] hover:text-[#0038B8]"
               aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMobileMenuOpen ? 'true' : 'false'}
             >
@@ -146,7 +146,7 @@ const Header: React.FC = () => {
                     <Link
                       href={item.path}
                       onClick={closeMobile}
-                      className="block px-6 py-3 text-[16px] font-medium text-[#0A1F44] hover:bg-[#F3F6FF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0038B8]"
+                      className="block px-6 py-3 text-[16px] font-medium text-[#0A1F44] hover:bg-[#F3F6FF]"
                     >
                       {item.label}
                     </Link>
@@ -157,7 +157,7 @@ const Header: React.FC = () => {
                             <Link
                               href={c.path}
                               onClick={closeMobile}
-                              className="block px-5 py-2 text-[14px] text-[#27315A] hover:text-[#0038B8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0038B8]"
+                              className="block px-5 py-2 text-[14px] text-[#27315A] hover:text-[#0038B8]"
                             >
                               {c.label}
                             </Link>
