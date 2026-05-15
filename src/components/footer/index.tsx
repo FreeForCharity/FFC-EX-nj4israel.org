@@ -36,10 +36,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-[#0A1F44] text-white">
-      <div
-        className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-14 px-6"
-        id="aria-font"
-      >
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-14 px-6 aria-font">
         {/* Brand */}
         <div className="space-y-4 lg:col-span-1">
           <Logo variant="light" size="md" />
@@ -139,10 +136,7 @@ const Footer: React.FC = () => {
 
       {/* Bottom bar */}
       <div className="border-t border-white/15">
-        <div
-          className="max-w-[1200px] mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-[13px] text-white/70"
-          id="aria-font"
-        >
+        <div className="max-w-[1200px] mx-auto px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-[13px] text-white/70 aria-font">
           <p>
             © {currentYear} {site.legalName}. All rights reserved.
           </p>

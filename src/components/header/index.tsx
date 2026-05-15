@@ -71,8 +71,7 @@ const Header: React.FC = () => {
 
             {/* Desktop nav */}
             <nav
-              className="hidden lg:flex items-center gap-1"
-              id="aria-font"
+              className="hidden lg:flex items-center gap-1 aria-font"
               aria-label="Main navigation"
             >
               {menuItems.map((item) => (
