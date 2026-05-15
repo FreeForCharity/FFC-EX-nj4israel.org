@@ -60,9 +60,9 @@ export const metadata: Metadata = {
     description: site.description,
     images: [
       {
-        url: '/web-app-manifest-512x512.png',
-        width: 512,
-        height: 512,
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
         alt: site.name,
       },
     ],
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     site: '@nj4israel',
     title: `${site.name} | Humanitarian Relief for Israel`,
     description: site.description,
-    images: ['/web-app-manifest-512x512.png'],
+    images: ['/og-image.png'],
   },
   icons: {
     icon: [
