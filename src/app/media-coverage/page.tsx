@@ -46,7 +46,7 @@ export default function MediaCoveragePage() {
         title="Media Coverage"
         subtitle="Selected articles and press mentions documenting our work."
       />
-      <section className="max-w-[820px] mx-auto px-6 py-14 md:py-20">
+      <section className="max-w-3xl mx-auto px-6 py-14 md:py-20">
         <ul className="space-y-6">
           {entries.map((e) => {
             const content = (
