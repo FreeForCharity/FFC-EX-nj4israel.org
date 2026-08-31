@@ -38,7 +38,9 @@ export default function PrivacyPolicyPage() {
             the European Economic Area, the United Kingdom, and Switzerland, analytics cookies are
             set only after you accept them through our cookie consent banner; everywhere else they
             are set from your first visit and you can turn them off at any time via the Cookie
-            Preferences link in our footer.
+            Preferences link in our footer. (Switzerland is included because Google&apos;s consent
+            defaults cover it; Swiss visitors&apos; data is protected by the Swiss FADP rather than
+            the GDPR.)
           </li>
         </ul>
 
