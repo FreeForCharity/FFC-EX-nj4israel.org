@@ -39,8 +39,8 @@ export default function PrivacyPolicyPage() {
             set only after you accept them through our cookie consent banner; everywhere else they
             are set from your first visit and you can turn them off at any time via the Cookie
             Preferences link in our footer. (Switzerland is included because Google&apos;s consent
-            defaults cover it; Swiss visitors&apos; data is protected by the Swiss FADP rather than
-            the GDPR.)
+            defaults cover it; Swiss visitors&apos; data is protected by Switzerland&apos;s Federal
+            Act on Data Protection (FADP) rather than the GDPR.)
           </li>
         </ul>
 
