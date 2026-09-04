@@ -34,13 +34,12 @@ export default function PrivacyPolicyPage() {
             numbers ourselves.
           </li>
           <li>
-            <strong>Basic web analytics</strong> such as pages viewed and approximate location. In
-            the European Economic Area, the United Kingdom, and Switzerland, analytics cookies are
-            set only after you accept them through our cookie consent banner; everywhere else they
-            are set from your first visit and you can turn them off at any time via the Cookie
-            Preferences link in our footer. (Switzerland is included because Google&apos;s consent
-            defaults cover it; the data of visitors in Switzerland is protected by
-            Switzerland&apos;s Federal Act on Data Protection (FADP) rather than the GDPR.)
+            <strong>Basic web analytics</strong> such as pages viewed and approximate location.
+            Analytics cookies are set only after you accept them through our cookie consent banner,
+            wherever you are, and you can turn them off again at any time via the Cookie Preferences
+            link in our footer. (Switzerland is included because Google&apos;s consent defaults
+            cover it; the data of visitors in Switzerland is protected by Switzerland&apos;s Federal
+            Act on Data Protection (FADP) rather than the GDPR.)
           </li>
         </ul>
 
@@ -78,16 +77,16 @@ export default function PrivacyPolicyPage() {
         <h2>Cookies</h2>
         <p>
           Our website uses minimal cookies. Necessary cookies are required for the site to function.
-          For analytics we use Google Consent Mode: in the European Economic Area, the United
-          Kingdom, and Switzerland, Google Analytics sets no cookies and reads no identifiers until
+          For analytics we use Google Consent Mode: wherever in the world you are, Google Analytics
+          sets no analytics or advertising cookies and reads no identifiers from your device until
           you accept through the cookie consent banner — until then only aggregate, cookieless
-          measurement takes place. Everywhere else, analytics cookies are set from your first visit.
-          Which rule applies to your visit is determined by Google from your IP address at the time
-          of your visit; IP geolocation is approximate. You can change or withdraw your choice at
-          any time via the Cookie Preferences link in our footer; withdrawing consent deletes the
-          analytics cookies this site set. This site does not read or respond to the &quot;Do Not
-          Track&quot; or Global Privacy Control browser signals; we do not sell or share personal
-          information, so there is nothing for those signals to opt out of.
+          measurement takes place. There is no country in which analytics cookies are set before you
+          choose. The same rule applies to every visitor, so nothing depends on where you are. You
+          can change or withdraw your choice at any time via the Cookie Preferences link in our
+          footer; withdrawing consent deletes the analytics cookies this site set. This site does
+          not read or respond to the &quot;Do Not Track&quot; or Global Privacy Control browser
+          signals; we do not sell or share personal information, so there is nothing for those
+          signals to opt out of.
         </p>
 
         <h2>Your Rights in the European Union, United Kingdom, and EEA (GDPR)</h2>
