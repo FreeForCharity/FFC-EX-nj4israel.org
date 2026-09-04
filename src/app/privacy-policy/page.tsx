@@ -37,9 +37,9 @@ export default function PrivacyPolicyPage() {
             <strong>Basic web analytics</strong> such as pages viewed and approximate location.
             Analytics cookies are set only after you accept them through our cookie consent banner,
             wherever you are, and you can turn them off again at any time via the Cookie Preferences
-            link in our footer. (Switzerland is included because Google&apos;s consent defaults
-            cover it; the data of visitors in Switzerland is protected by Switzerland&apos;s Federal
-            Act on Data Protection (FADP) rather than the GDPR.)
+            link in our footer. (Visitors in Switzerland are protected by Switzerland&apos;s Federal
+            Act on Data Protection (FADP) rather than the GDPR; the treatment described here is the
+            same either way.)
           </li>
         </ul>
 
